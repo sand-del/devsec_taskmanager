@@ -21,3 +21,4 @@ repos:
     hooks:
     - id: bandit
       args: ["-r", "task_manager/backend/app/"]
+      pass_filenames: false
