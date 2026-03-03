@@ -20,3 +20,4 @@ repos:
     rev: 1.9.4
     hooks:
     - id: bandit
+      args: ["-r", "task_manager/backend/app/"]
