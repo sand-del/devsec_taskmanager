@@ -27,6 +27,6 @@ repos:
     rev: v2.14.0
     hooks:
     - id: hadolint-docker
-      args: ["task_manager/backend/Dockerfile"]
+      args: ["task_manager/backend/Dockerfile","task_manager/frontend/Dockerfile"]
       always_run: true
       pass_filenames: false
