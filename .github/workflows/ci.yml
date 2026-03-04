@@ -104,3 +104,10 @@ jobs:
           file: task_manager/backend/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository }}/backend:latest
+      - name: Build and push frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: task_manager/frontend/Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository }}/frontend:latest
