@@ -38,6 +38,11 @@ jobs:
       - name: Prettier check
         run: npx prettier --check "**/*.{js,html,css}"
 
+      - name: Lint Dockerfiles
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          recursive: true
+
   security:
     name: Security
     runs-on: ubuntu-latest
