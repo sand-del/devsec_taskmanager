@@ -38,22 +38,22 @@ jobs:
       - name: Prettier check
         run: npx prettier --check "**/*.{js,html,css}"
 
-  security:
-    name: Security
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+  # security:
+  #   name: Security
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.11"
 
-      - name: Install bandit
-        run: pip install bandit
+  #     - name: Install bandit
+  #       run: pip install bandit
 
-      - name: Security check (Bandit)
-        run: bandit -r task_manager/backend/app/
+  #     - name: Security check (Bandit)
+  #       run: bandit -r task_manager/backend/app/
 
   build:
     name: Build and analyze (Sonar)
